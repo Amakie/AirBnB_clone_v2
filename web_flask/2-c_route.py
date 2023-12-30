@@ -6,15 +6,18 @@ from flask import Flask
 # create an instance of Flask
 app = Flask(__name__)
 
+
 # map root /
 @app.route("/", strict_slashes=False)
 def hello_hbnb():
     return "Hello HBNB!"
 
+
 # map root /hbnb
 @app.route("/hbnb", strict_slashes=False)
 def _hbnb():
     return "HBNB"
+
 
 #map to c
 @app.route("/c/<text>", strict_slashes=False)
