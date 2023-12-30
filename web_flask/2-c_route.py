@@ -19,12 +19,13 @@ def _hbnb():
     return "HBNB"
 
 
-#map to c
+# map to c
 @app.route("/c/<text>", strict_slashes=False)
 def c_route():
     """Displays 'C' followed by the value of <text>."""
     text = text.replace("_", " ")
     return "C {}".format(text)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
